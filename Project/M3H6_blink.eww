@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <project>
+        <path>$WS_DIR$\m3h6_blink.ewp</path>
+    </project>
+    <batchBuild>
+        <batchDefinition>
+            <name>All</name>
+            <member>
+                <project>GPIO</project>
+                <configuration>Debug iFlash</configuration>
+            </member>
+            <member>
+                <project>GPIO</project>
+                <configuration>Debug iRAM</configuration>
+            </member>
+        </batchDefinition>
+    </batchBuild>
+</workspace>

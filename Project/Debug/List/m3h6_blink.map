@@ -1,0 +1,300 @@
+###############################################################################
+#
+# IAR ELF Linker V8.20.2.14835/W32 for ARM                26/May/2018  22:24:36
+# Copyright 2007-2017 IAR Systems AB.
+#
+#    Output file  =  
+#        D:\Data\Develop\IAR_Project\TMPM3H6FWFG\M3H6_Blink\Project\Debug\Exe\m3h6_blink.out
+#    Map file     =  
+#        D:\Data\Develop\IAR_Project\TMPM3H6FWFG\M3H6_Blink\Project\Debug\List\m3h6_blink.map
+#    Command line =  
+#        -f C:\Users\Pairot\AppData\Local\Temp\EW6B8E.tmp
+#        (D:\Data\Develop\IAR_Project\TMPM3H6FWFG\M3H6_Blink\Project\Debug\Obj\M3H6_port.o
+#        D:\Data\Develop\IAR_Project\TMPM3H6FWFG\M3H6_Blink\Project\Debug\Obj\main.o
+#        D:\Data\Develop\IAR_Project\TMPM3H6FWFG\M3H6_Blink\Project\Debug\Obj\startup_TMPM3H6.o
+#        D:\Data\Develop\IAR_Project\TMPM3H6FWFG\M3H6_Blink\Project\Debug\Obj\system_TMPM3H6.o
+#        -o
+#        D:\Data\Develop\IAR_Project\TMPM3H6FWFG\M3H6_Blink\Project\Debug\Exe\m3h6_blink.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        D:\Data\Develop\IAR_Project\TMPM3H6FWFG\M3H6_Blink\Project\Debug\List\m3h6_blink.map
+#        --config "C:\Program Files\IAR Systems\Embedded Workbench
+#        8.0\arm\config\linker\Toshiba\TMPM3H6FWFG.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x00000000 { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0001ffff] { ro };
+define block CSTACK with size = 512, alignment = 8 { };
+define block HEAP with size = 512, alignment = 8 { };
+"P2":  place in [from 0x20000000 to 0x20003fff] {
+          rw, block CSTACK, block HEAP };
+
+No sections matched the following patterns:
+
+  rw                   in "P2"
+  section .backup_ram  in "P3"
+  section .data_flash  in "P4"
+
+
+  Section   Kind        Address   Size  Object
+  -------   ----        -------   ----  ------
+"A0":                            0x214
+  .intvec   ro code  0x00000000  0x214  startup_TMPM3H6.o [1]
+                   - 0x00000214  0x214
+
+"P1":                            0x4cc
+  .text     ro code  0x00000214  0x120  main.o [1]
+  .text     ro code  0x00000334   0x5c  M3H6_port.o [1]
+  .text     ro code  0x00000390   0xfc  system_TMPM3H6.o [1]
+  .text     ro code  0x0000048c   0x1e  cmain.o [4]
+  .text     ro code  0x000004aa    0x4  low_level_init.o [3]
+  .text     ro code  0x000004ae    0x4  exit.o [3]
+  .text     ro code  0x000004b4    0xa  cexit.o [4]
+  .text     ro code  0x000004c0   0x14  exit.o [5]
+  .text     ro code  0x000004d4   0x10  startup_TMPM3H6.o [1]
+  .text     ro code  0x000004e4    0xc  cstartup_M.o [4]
+  .text     ro code  0x000004f0    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000004f4    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000004f8    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000004fc    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000500    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000504    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000508    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x0000050c    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000510    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000514    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000518    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x0000051c    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000520    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000524    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000528    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x0000052c    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000530    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000534    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000538    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x0000053c    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000540    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000544    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000548    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x0000054c    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000550    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000554    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000558    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x0000055c    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000560    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000564    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000568    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x0000056c    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000570    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000574    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000578    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x0000057c    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000580    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000584    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000588    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x0000058c    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000590    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000594    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000598    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x0000059c    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005a0    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005a4    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005a8    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005ac    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005b0    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005b4    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005b8    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005bc    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005c0    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005c4    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005c8    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005cc    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005d0    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005d4    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005d8    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005dc    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005e0    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005e4    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005e8    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005ec    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005f0    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005f4    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005f8    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000005fc    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000600    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000604    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000608    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x0000060c    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000610    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000614    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000618    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x0000061c    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000620    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000624    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000628    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x0000062c    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000630    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000634    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000638    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x0000063c    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000640    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000644    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000648    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x0000064c    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000650    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000654    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000658    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x0000065c    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000660    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000664    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000668    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x0000066c    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000670    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000674    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000678    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x0000067c    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000680    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000684    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000688    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x0000068c    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000690    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000694    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x00000698    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x0000069c    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000006a0    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000006a4    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000006a8    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000006ac    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000006b0    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000006b4    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000006b8    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000006bc    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000006c0    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000006c4    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000006c8    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000006cc    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000006d0    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000006d4    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000006d8    0x4  startup_TMPM3H6.o [1]
+  .text     ro code  0x000006dc    0x4  startup_TMPM3H6.o [1]
+                   - 0x000006e0  0x4cc
+
+"P2":                            0x200
+  CSTACK             0x20000000  0x200  <Block>
+    CSTACK  uninit   0x20000000  0x200  <Block tail>
+                   - 0x20000200  0x200
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module             ro code  rw data
+    ------             -------  -------
+D:\Data\Develop\IAR_Project\TMPM3H6FWFG\M3H6_Blink\Project\Debug\Obj: [1]
+    M3H6_port.o             92
+    main.o                 288
+    startup_TMPM3H6.o    1 044
+    system_TMPM3H6.o       252
+    -----------------------------------
+    Total:               1 676
+
+command line: [2]
+    -----------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                   4
+    low_level_init.o         4
+    -----------------------------------
+    Total:                   8
+
+rt7M_tl.a: [4]
+    cexit.o                 10
+    cmain.o                 30
+    cstartup_M.o            12
+    -----------------------------------
+    Total:                  52
+
+shb_l.a: [5]
+    exit.o                  20
+    -----------------------------------
+    Total:                  20
+
+    Gaps                     4
+    Linker created                  512
+---------------------------------------
+    Grand Total:         1 760      512
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address  Size  Type      Object
+-----                      -------  ----  ----      ------
+?main                   0x0000048d        Code  Gb  cmain.o [4]
+CSTACK$$Base            0x20000000         --   Gb  - Linker created -
+CSTACK$$Limit           0x20000200         --   Gb  - Linker created -
+GPIO_Configuration      0x00000299  0x20  Code  Gb  main.o [1]
+INTT32A0A_Configuration
+                        0x000002b9  0x34  Code  Gb  main.o [1]
+INTT32A0A_IRQHandler    0x000002ed  0x16  Code  Gb  main.o [1]
+NVIC_ClearPendingIRQ    0x0000024d  0x1c  Code  Lc  main.o [1]
+NVIC_DisableIRQ         0x00000231  0x1c  Code  Lc  main.o [1]
+NVIC_EnableIRQ          0x00000215  0x1c  Code  Lc  main.o [1]
+NVIC_SetPriority        0x00000269  0x24  Code  Lc  main.o [1]
+Region$$Table$$Base     0x00000000         --   Gb  - Linker created -
+Region$$Table$$Limit    0x00000000         --   Gb  - Linker created -
+SystemInit              0x00000391  0xc0  Code  Gb  system_TMPM3H6.o [1]
+__cmain                 0x0000048d        Code  Gb  cmain.o [4]
+__exit                  0x000004c1  0x14  Code  Gb  exit.o [5]
+__iar_program_start     0x000004e5        Code  Gb  cstartup_M.o [4]
+__iar_systems$$module {Abs}
+                        0x00000001        Data  Gb  command line/config [2]
+__low_level_init        0x000004ab   0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000        Data  Gb  startup_TMPM3H6.o [1]
+_call_main              0x00000499        Code  Gb  cmain.o [4]
+_exit                   0x000004b5        Code  Gb  cexit.o [4]
+_main                   0x000004a7        Code  Gb  cmain.o [4]
+exit                    0x000004af   0x4  Code  Gb  exit.o [3]
+ini_port                0x00000335  0x5c  Code  Gb  M3H6_port.o [1]
+main                    0x0000028d   0xc  Code  Gb  main.o [1]
+
+
+[1] = D:\Data\Develop\IAR_Project\TMPM3H6FWFG\M3H6_Blink\Project\Debug\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  1 760 bytes of readonly  code memory
+    512 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

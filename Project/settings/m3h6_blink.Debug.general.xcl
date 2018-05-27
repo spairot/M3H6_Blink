@@ -1,0 +1,15 @@
+"C:\Program Files\IAR Systems\Embedded Workbench 8.0\arm\bin\armproc.dll" 
+
+"C:\Program Files\IAR Systems\Embedded Workbench 8.0\arm\bin\armJET.dll" 
+
+"D:\Data\Develop\IAR_Project\TMPM3H6FWFG\M3H6_Blink\Project\Debug\Exe\m3h6_blink.out" 
+
+--plugin "C:\Program Files\IAR Systems\Embedded Workbench 8.0\arm\bin\armbat.dll" 
+
+--device_macro "C:\Program Files\IAR Systems\Embedded Workbench 8.0\arm\config\debugger\Toshiba\TMPM3H6x.dmac" 
+
+--flash_loader "C:\Program Files\IAR Systems\Embedded Workbench 8.0\arm\config\flashloader\Toshiba\FlashTMPM3H6FWFG.board" 
+
+
+
+
